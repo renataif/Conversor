@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTipoMedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tipo_de_medida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/cbTipoMedida"
+        android:layout_width="368dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/tvTipoMedida"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipoMedida"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etValorInicial"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Valor Inicial"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/cbTipoMedida"
+        app:layout_constraintTop_toBottomOf="@+id/cbTipoMedida" />
+
+    <EditText
+        android:id="@+id/etValorFinal"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Valor Final"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/etValorInicial"
+        app:layout_constraintTop_toBottomOf="@+id/etValorInicial" />
+
+    <EditText
+        android:id="@+id/etVariacao"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Variação"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/etValorFinal"
+        app:layout_constraintTop_toBottomOf="@+id/etValorFinal" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="OnClick"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="@+id/etVariacao"
+        app:layout_constraintTop_toBottomOf="@+id/etVariacao" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="368dp"
+        android:layout_height="352dp"
+        android:layout_marginTop="12dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="@+id/btnCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
